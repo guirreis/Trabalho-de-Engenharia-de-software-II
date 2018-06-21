@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 25-Abr-2018 às 22:35
+-- Generation Time: 21-Jun-2018 às 03:32
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -25,33 +25,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Estrutura da tabela `cadastro`
 --
 
-CREATE TABLE `usuario` (
+CREATE TABLE `cadastro` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) NOT NULL,
-  `nascimento` date NOT NULL,
-  `sexo` varchar(250) NOT NULL,
-  `cpf` varchar(250) NOT NULL,
-  `rg` varchar(250) NOT NULL
+  `data` date NOT NULL,
+  `sexo` tinyint(1) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `telefone` varchar(20) NOT NULL,
+  `estado` varchar(250) NOT NULL,
+  `cidade` varchar(250) NOT NULL,
+  `cep` varchar(250) NOT NULL,
+  `formacao` varchar(250) NOT NULL,
+  `inicio` int(11) NOT NULL,
+  `curso` varchar(250) NOT NULL,
+  `profissao` varchar(250) NOT NULL,
+  `idioma` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `usuario`
---
-
-INSERT INTO `usuario` (`id`, `nome`, `nascimento`, `sexo`, `cpf`, `rg`) VALUES
-(19, 'Guilherme', '2018-04-04', 'Masculino', '03588179003', '5115050568');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `usuario`
+-- Indexes for table `cadastro`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `cadastro`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +60,10 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT for table `usuario`
+-- AUTO_INCREMENT for table `cadastro`
 --
-ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+ALTER TABLE `cadastro`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
